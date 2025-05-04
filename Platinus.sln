@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platinus.API", "Platinus.API\Platinus.API.csproj", "{3CD8C791-3A6E-4AD6-B1D1-CD3188CC4690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platinus.Application", "Platinus.Application\Platinus.Application.csproj", "{EAD5D970-1C0C-4A01-98B5-F16B82F535FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platinus.Domain", "Platinus.Domain\Platinus.Domain.csproj", "{75C638E0-E7D3-4343-900F-535721F96193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platinus.Infrastructure", "Platinus.Infrastructure\Platinus.Infrastructure.csproj", "{B551C4BE-EA5D-4FBC-BAF1-E6B3F6F0E36D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{3CD8C791-3A6E-4AD6-B1D1-CD3188CC4690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD8C791-3A6E-4AD6-B1D1-CD3188CC4690}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD8C791-3A6E-4AD6-B1D1-CD3188CC4690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD5D970-1C0C-4A01-98B5-F16B82F535FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD5D970-1C0C-4A01-98B5-F16B82F535FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD5D970-1C0C-4A01-98B5-F16B82F535FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD5D970-1C0C-4A01-98B5-F16B82F535FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C638E0-E7D3-4343-900F-535721F96193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C638E0-E7D3-4343-900F-535721F96193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C638E0-E7D3-4343-900F-535721F96193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C638E0-E7D3-4343-900F-535721F96193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B551C4BE-EA5D-4FBC-BAF1-E6B3F6F0E36D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B551C4BE-EA5D-4FBC-BAF1-E6B3F6F0E36D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B551C4BE-EA5D-4FBC-BAF1-E6B3F6F0E36D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B551C4BE-EA5D-4FBC-BAF1-E6B3F6F0E36D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
