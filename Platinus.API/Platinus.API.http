@@ -1,0 +1,6 @@
+@Platinus.API_HostAddress = http://localhost:5267
+
+GET {{Platinus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
