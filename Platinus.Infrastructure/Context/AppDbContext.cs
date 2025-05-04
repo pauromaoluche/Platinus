@@ -12,18 +12,8 @@ namespace Platinus.Infrastructure.Context
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
 
-        private IConfiguration _configuration;
-
-        public AppDbContext(IConfiguration configuration, DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var connectionString = _configuration["AppSettings:DefaultConnection"];
-
-            optionsBuilder.UseMySQL(connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
