@@ -1,4 +1,6 @@
-﻿namespace Platinus.Domain.Entities
+﻿using Platinus.Domain.Entities.Enums;
+
+namespace Platinus.Domain.Entities
 {
     public class User : EntityBase
     {
@@ -7,7 +9,7 @@
         public string Email { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public string Url { get; set; } = String.Empty;
-        public string Password { get; set; } = string.Empty;
-        public List<Role> Roles { get; set; } = new List<Role>();
+        public string PasswordHash { get; set; } = string.Empty;
+        public UserRoleEnum Role { get; set; }
     }
 }
