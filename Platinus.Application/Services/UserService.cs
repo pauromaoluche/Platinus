@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Platinus.Application.DTOs.Response;
 using Platinus.Application.Interfaces;
 using Platinus.Domain.Entities;
 using Platinus.Infrastructure.Context;
@@ -14,11 +15,20 @@ namespace Platinus.Application.Services
             _db = db;
         }
 
-        public async Task<List<User>> GetAll()
+        public async Task<ResponseAllUser> GetAll()
         {
             var users = await _db.Users.ToListAsync();
 
-            return users;
+            return new ResponseAllUser
+            {
+                Users = users.Select(user => new ResponseShortUser
+                {
+                    Id = user.Id,
+                    Nick = user.Nick,
+                    Name = user.Name,
+                    Url = user.Url
+                }).ToList()
+            };
         }
     }
 }

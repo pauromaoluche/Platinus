@@ -4,10 +4,11 @@ namespace Platinus.Domain.Entities.Enums
 {
     public enum UserRoleEnum
     {
-        [Description("Administrador")]
-        Admin = 1,
-
         [Description("Usuario")]
-        User = 2,
+        User = 1,
+
+        [Description("Administrador")]
+        Admin = 2,
+
     }
 }

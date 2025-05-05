@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Platinus.Infrastructure\Platinus.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Requests\" />
+  </ItemGroup>
+
 </Project>

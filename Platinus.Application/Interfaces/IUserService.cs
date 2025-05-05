@@ -1,9 +1,9 @@
-﻿using Platinus.Domain.Entities;
+﻿using Platinus.Application.DTOs.Response;
 
 namespace Platinus.Application.Interfaces
 {
     public interface IUserService
     {
-        Task<List<User>> GetAll();
+        Task<ResponseAllUser> GetAll();
     }
 }
