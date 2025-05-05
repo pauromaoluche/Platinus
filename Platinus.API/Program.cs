@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Platinus.Application.Interfaces;
+using Platinus.Application.Services;
 using Platinus.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +11,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>();
+//builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySQL(builder.Configuration["AppSettings:DefaultConnection"]));
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
