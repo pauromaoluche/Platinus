@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Platinus.Domain.Entities.Relationships;
 using Platinus.Domain.Entities;
 using System.Text;
 
@@ -9,10 +7,13 @@ namespace Platinus.Infrastructure.Context
     public class AppDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
 
+        /*
         public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }*/
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
 
