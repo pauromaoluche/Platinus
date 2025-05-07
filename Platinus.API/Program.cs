@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Platinus.Application.Interfaces;
-using Platinus.Application.Services;
+using Platinus.Application.AutoMappers;
+using Platinus.Application.Interfaces.User;
+using Platinus.Application.Services.User;
 using Platinus.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySQL(builder.Configuration["AppSettings:DefaultConnection"]));
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();

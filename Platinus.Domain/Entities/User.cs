@@ -10,6 +10,6 @@ namespace Platinus.Domain.Entities
         public string Description { get; set; } = String.Empty;
         public string Url { get; set; } = String.Empty;
         public string PasswordHash { get; set; } = string.Empty;
-        public UserRoleEnum Role { get; set; }
+        public UserRoleEnum Role { get; set; } = UserRoleEnum.User;
     }
 }
