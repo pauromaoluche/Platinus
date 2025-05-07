@@ -9,6 +9,5 @@ namespace Platinus.Domain.Entities.Enums
 
         [Description("Administrador")]
         Admin = 2,
-
     }
 }
