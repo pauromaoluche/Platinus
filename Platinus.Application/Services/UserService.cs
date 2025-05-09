@@ -2,12 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Platinus.Application.DTOs.Requests;
 using Platinus.Application.DTOs.Response;
-using Platinus.Application.Interfaces.User;
+using Platinus.Application.Interfaces;
 using Platinus.Domain.Entities;
 using Platinus.Domain.Exceptions;
 using Platinus.Infrastructure.Context;
 
-namespace Platinus.Application.Services.User
+namespace Platinus.Application.Services
 {
     public class UserService : IUserService
     {
@@ -24,7 +24,7 @@ namespace Platinus.Application.Services.User
         {
             await ValidateAsync(dto);
 
-            var user = _mapper.Map<Domain.Entities.User>(dto);
+            var user = _mapper.Map<User>(dto);
             user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password);
 
             _db.Users.Add(user);

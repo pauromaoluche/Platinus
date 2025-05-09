@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Platinus.Application.DTOs.Requests;
 using Platinus.Infrastructure.Context;
 
-namespace Platinus.Application.Services.User
+namespace Platinus.Application.Services
 {
     public class UserValidator : AbstractValidator<RequestUser>
     {
