@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Platinus.Application.DTOs.Requests;
 using Platinus.Application.DTOs.Response;
-using Platinus.Application.Interfaces.User;
+using Platinus.Application.Interfaces;
 
 namespace Platinus.API.Controllers
 {
